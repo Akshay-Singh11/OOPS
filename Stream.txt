@@ -1,0 +1,120 @@
+package com.Arrays2.test;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.Random;
+
+public class ArraysTester {
+
+	public static void main(String[] args) {
+
+//		int[] a = {1,2,3,4};
+//		Integer[] b = new Integer[a.length];
+//		for (int i = 0; i < b.length; i++) {
+//			b[i] = a[i];
+//
+//		}
+
+//		Integer[] a = {4,3,2,1};
+//		System.out.println(Arrays.toString(a));
+//		Arrays.sort(a,Comparator.reverseOrder());
+//		
+//		System.out.println(Arrays.toString(a));
+
+//		int[] ar = {3,4,6,4,3,2,1,4,6,7,8,7,6,5,4,3,4,5,6,7};
+//		System.out.println(Arrays.toString(ar));
+//		Arrays.sort(ar,3,7);
+//		System.out.println(Arrays.toString(ar));
+
+//		int[][] arr = {{21,1},{2,32},{2,3,23,45,67},{0}};
+//		
+//		Arrays.sort(arr,Comparator.comparing(mat -> mat[0]));
+//		for (int[] is : arr) {
+//			System.out.println(Arrays.toString(is));
+//		}
+
+//		int[] a1 = {1,2,3,4};
+//		int[] a2 = {1,2,4,4};
+//		System.out.println(Arrays.equals(a1, a2));
+
+//		int[][] a1 = {{1,2},{3,4},{5,6}};
+//		int[][] a2 = {{1,2},{3,4},{5,6}};
+//		System.out.println(Arrays.deepEquals(a1, a2));
+
+//		int[] a1 = {1,2,3,4};
+//		int[] a2 = {1,2,3,4};
+//		System.out.println(Arrays.mismatch(a1, a2));
+
+//		int[] arr = new int[20];
+//		Arrays.fill(arr,0,8, -1);
+//		System.out.println(Arrays.toString(arr));
+
+//		int[] arr = { 1, 1, 1, 2, 2, 2, 3, 33, 4, 4, 4, 0, 0, 0, 0 };
+//		int[] a = Arrays.stream(arr).distinct().toArray();
+//		System.out.println(Arrays.toString(a));
+
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		System.out.println(Arrays.toString(arr));
+//		int[] a1 = Arrays.stream(arr).filter(n -> n > 30).toArray();
+//
+//		System.out.println(Arrays.toString(a1));
+
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		System.out.println(Arrays.toString(arr));
+//		// int[] a1 = Arrays.stream(arr).filter(n -> n % 3 == 0).toArray();
+//		int a1 = Arrays.stream(arr).filter(n -> n % 3 == 0).sum();
+//		System.out.println(a1);
+		
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		System.out.println(Arrays.toString(arr));
+//		// int[] a1 = Arrays.stream(arr).filter(n -> n % 3 == 0).toArray();
+//		int a1 = Arrays.stream(arr).sum();
+//		System.out.println(a1);
+		
+		
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		System.out.println(Arrays.toString(arr));
+//		// int[] a1 = Arrays.stream(arr).filter(n -> n % 3 == 0).toArray();
+//		long a1 = Arrays.stream(arr).filter(n -> n % 3 == 0).count();
+//		System.out.println(a1);
+		
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		System.out.println(Arrays.toString(arr));
+//		int[] a1 = Arrays.stream(arr).map(n -> n+1).toArray();
+//		System.out.println(Arrays.toString(a1));
+	
+		
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		//System.out.println(Arrays.stream(arr).average());;
+////		double d = Arrays.stream(arr).average().getAsDouble();
+//		double d = Arrays.stream(arr).average().orElse(0);
+		
+//		int[] arr = { 12, 23, 23, 34, 45, 56, 67, 78, 87, 32 };
+//		int x = Arrays.stream(arr).max().orElse(0);
+//		
+//		x = Arrays.stream(arr).min().orElse(0);
+		
+		Random rand = new Random();
+		int[] arr = new int[13];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = rand.nextInt(0,10);
+			
+		}
+		System.out.println(Arrays.toString(arr));
+		
+		int[] a1 = Arrays.stream(arr).distinct().toArray();
+		
+		for (int i : a1) {
+			long count = Arrays.stream(arr).filter(n -> n == i).count();
+			System.out.println(i+" "+count);
+		}
+		
+		
+		
+
+		
+		
+		
+	}
+
+}
